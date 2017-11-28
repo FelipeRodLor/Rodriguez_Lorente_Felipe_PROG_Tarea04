@@ -27,4 +27,12 @@ public class Punto {
     public double getY() {
         return y;
     }
+
+    public String toString() {
+
+        String representacion = x + " " + y;
+
+        return representacion;
+
+    }
 }
