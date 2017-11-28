@@ -35,4 +35,10 @@ public class Punto {
         return representacion;
 
     }
+
+    public double distancia(Punto punto2) {
+
+        return (double) Math.sqrt(Math.pow(punto2.getX() - x, 2) + Math.pow(punto2.getY() - y, 2));
+
+    }
 }
