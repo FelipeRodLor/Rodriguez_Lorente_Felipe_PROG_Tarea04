@@ -22,4 +22,15 @@ public class Triangulo {
 
     }
 
+    public Punto getPuntoA() {
+        return puntoA;
+    }
+
+    public Punto getPuntoB() {
+        return puntoB;
+    }
+
+    public Punto getPuntoC() {
+        return puntoC;
+    }
 }
