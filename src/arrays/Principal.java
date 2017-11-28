@@ -17,9 +17,13 @@ public class Principal {
 
         int numTriangulos;
         Triangulo triangulos[];
-        double media = 0;
-        double perimetro = 0;
+        double media;
+        double perimetro;
         double sumaPer = 0;
+        double supMed = 0;
+        double infMed = 0;
+        double mayor = 0;
+        double menor = 999;
 
         System.out.println("¿Cuantos triangulos deseas generar?");
         numTriangulos = Entrada.entero();
@@ -47,6 +51,27 @@ public class Principal {
 
         media = sumaPer / numTriangulos;
         System.out.println("El perimetro medio es; " + media);
-    }
 
+        for (int i = 0; i < numTriangulos; i++) {
+
+            if (triangulos[i].perimetro() > media) {
+                supMed = supMed + 1;
+            }
+            if (triangulos[i].perimetro() < media) {
+                infMed = infMed + 1;
+            }
+            if (triangulos[i].perimetro() > mayor) {
+                mayor = triangulos[i].perimetro();
+            }
+            if (triangulos[i].perimetro() < menor) {
+                menor = triangulos[i].perimetro();
+            }
+        }
+
+        System.out.println("El triangulo con menor medida mide; " + menor);
+        System.out.println("El triangulo con mayor medida mide; " + mayor);
+        System.out.println("El numero de triangulos con perimetro inferior a la media es; " + (int) infMed);
+        System.out.println("El numero de triangulos con perimetro superior a la media es; " + (int) supMed);
+
+    }
 }
