@@ -38,4 +38,11 @@ public class Triangulo {
         String representacion = puntoA + " " + puntoB + " " + puntoC;
         return representacion;
     }
+
+    public double perimetro() {
+
+        return puntoA.distancia(puntoB) + puntoA.distancia(puntoC) + puntoC.distancia(puntoB);
+
+    }
+
 }
