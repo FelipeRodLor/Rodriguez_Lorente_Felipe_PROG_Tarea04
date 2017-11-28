@@ -17,6 +17,9 @@ public class Principal {
 
         int numTriangulos;
         Triangulo triangulos[];
+        double media = 0;
+        double perimetro = 0;
+        double sumaPer = 0;
 
         System.out.println("¿Cuantos triangulos deseas generar?");
         numTriangulos = Entrada.entero();
@@ -37,6 +40,13 @@ public class Principal {
 
         }
 
+        for (int i = 0; i < numTriangulos; i++) {
+            perimetro = triangulos[i].perimetro();
+            sumaPer = perimetro + sumaPer;
+        }
+
+        media = sumaPer / numTriangulos;
+        System.out.println("El perimetro medio es; " + media);
     }
 
 }
