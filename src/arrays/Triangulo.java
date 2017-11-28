@@ -33,4 +33,9 @@ public class Triangulo {
     public Punto getPuntoC() {
         return puntoC;
     }
+
+    public String toString() {
+        String representacion = puntoA + " " + puntoB + " " + puntoC;
+        return representacion;
+    }
 }
