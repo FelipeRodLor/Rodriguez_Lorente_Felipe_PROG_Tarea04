@@ -10,9 +10,16 @@ package arrays;
  * @author Felipillo
  */
 public class Triangulo {
-   
+
     private Punto puntoA;
     private Punto puntoB;
     private Punto puntoC;
-    
+
+    public Triangulo(Punto puntoA, Punto puntoB, Punto puntoC) {
+        this.puntoA = puntoA;
+        this.puntoB = puntoB;
+        this.puntoC = puntoC;
+
+    }
+
 }
