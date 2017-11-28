@@ -28,6 +28,15 @@ public class Principal {
 
         triangulos = new Triangulo[numTriangulos];
 
+        for (int i = 0; i < numTriangulos; i++) {
+            Punto puntoA = new Punto(Math.random() * 100, Math.random() * 100);
+            Punto puntoB = new Punto(Math.random() * 100, Math.random() * 100);
+            Punto puntoC = new Punto(Math.random() * 100, Math.random() * 100);
+
+            triangulos[i] = new Triangulo(puntoA, puntoB, puntoC);
+
+        }
+
     }
 
 }
